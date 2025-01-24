@@ -52,4 +52,12 @@
   .introducao img {
     display: none;
   }
+ .experiencia .subtitulo {
+    font-size: 2rem;
+    color:black;
+
+  }
+  .introducao{
+    padding: 1.5rem;
+  }
 }
