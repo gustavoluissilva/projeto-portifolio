@@ -5,6 +5,16 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 8rem;
+  position:relative;
+}
+.formacao-container::after {
+  content:"";
+  display:block;
+  width:130px;
+  height:100px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position:absolute;
+  bottom:-50px;
 }
 .formacao {
   background: #141414;
@@ -12,6 +22,7 @@
 }
 .formacao .subtitulo {
   color: #000;
+  max-width: 4ch;
 }
 .formacao-texto {
   font-size: 1.5rem;
@@ -62,4 +73,45 @@
 .faculdade-instituicao{
   color:#a3a3a3;
   font-size:1.125rem; 
+}
+.cursos{
+  margin-bottom:60px;
+
+}
+.idiomas h3 {
+  font-size:0.875 rem ;
+  line-height:1.4;
+  color: #8f8f8f;
+  text-transform:uppercase;
+  margin-bottom: 15px;
+  position: relative;
+}
+.idiomas h3::before {
+  display:block;
+  content:"";
+  width: 24px;
+  height: 24px;
+  background: url("../img/idiomas.svg") no-repeat center center;
+  position:absolute;
+  left:-36px;
+  top:2px;
+}
+@media(max-width:800px){
+  .formacao-container{
+    grid-template-columns:1fr;
+    padding:  40px 20px;
+    gap:40px;
+  }
+  .formacao .subtitulo{
+    color: #fff;
+  }
+  .formacao-texto{
+    font-size:1.25rem;
+  }
+  .idiomas h3::before{
+    position: initial;
+    margin-bottom: 10px;
+
+  }
+
 }
